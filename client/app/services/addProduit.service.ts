@@ -20,9 +20,8 @@ export class AddProduitService {
   addAddProduit(addProduit: AddProduit): Observable<AddProduit> {
     return this.http.post<AddProduit>('/api/addProduit', addProduit);
   }
-
-  getAddProduit(addProduit: AddProduit): Observable<AddProduit> {
-    return this.http.get<AddProduit>(`/api/addProduit/${addProduit._id}`);
+  getAddProduit(addProduit: string): Observable<AddProduit> {
+    return this.http.get<AddProduit>(`/api/addProduit/${addProduit}`);
   }
 
   editAddProduit(addProduit: AddProduit): Observable<string> {

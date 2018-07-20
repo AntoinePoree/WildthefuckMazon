@@ -1,3 +1,4 @@
+import { SeeProduitComponent } from './see-produit/see-produit.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: '', component: AboutComponent },
   { path: 'product', component: ProduitComponent },
   { path: 'addproduct', component: AddProduitsComponent },
+  { path: 'see', component: SeeProduitComponent },
   { path: 'cats', component: CatsComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },

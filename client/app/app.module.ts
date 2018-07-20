@@ -20,6 +20,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { ProduitComponent } from './produit/produit.component';
 import { AddProduitsComponent } from './addProduit/addProduit.component';
 import { AddProduitService } from './services/addProduit.service';
+import { SeeProduitComponent } from './see-produit/see-produit.component';
 
 export function tokenGetter() {
   return localStorage.getItem('token');
@@ -38,6 +39,7 @@ export function tokenGetter() {
     NotFoundComponent,
     ProduitComponent,
     AddProduitsComponent,
+    SeeProduitComponent,
   ],
   imports: [
     RoutingModule,

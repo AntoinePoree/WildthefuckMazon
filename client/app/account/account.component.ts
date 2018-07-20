@@ -12,7 +12,7 @@ export class AccountComponent implements OnInit {
 
   user: User;
   isLoading = true;
-
+  sold = 0;
   constructor(private auth: AuthService,
               public toast: ToastComponent,
               private userService: UserService) { }
@@ -30,10 +30,19 @@ export class AccountComponent implements OnInit {
   }
 
   save(user: User) {
-    this.userService.editUser(user).subscribe(
-      res => this.toast.setMessage('account settings saved!', 'success'),
+    this.userService.editUser(this.user).subscribe(
+      (res) => {
+        this.user.sold = this.sold,
+        this.toast.setMessage('account settings saved!', 'success');
+      },
       error => console.log(error),
     );
   }
-
+  getRich() {
+    if (this.user.sold !== 0) {
+      this.sold = this.user.sold;
+    }
+    this.sold += 1;
+    this.save(this.user);
+  }
 }

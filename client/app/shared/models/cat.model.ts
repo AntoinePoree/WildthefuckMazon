@@ -1,5 +1,5 @@
 export class Cat {
-  _id?: string;
+  _id?: any;
   name?: string;
   weight?: number;
   age?: number;

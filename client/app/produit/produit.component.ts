@@ -1,6 +1,7 @@
 import { AddProduitService } from './../services/addProduit.service';
 import { Component, OnInit } from '@angular/core';
 import { AddProduit } from '../shared/models/addProduit.model';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-produit',
@@ -15,19 +16,21 @@ export class ProduitComponent implements OnInit {
 
   constructor(
     private addProduitService: AddProduitService,
-  ) {
-
-  }
+    private route: ActivatedRoute,
+    private router: Router,
+  ) {}
 
   ngOnInit() {
     this.getAddProduits();
-
   }
   getAddProduits() {
     this.addProduitService.getAddProduits().subscribe(
-      data => this.addProduits = data,
-      error => console.log(error),
-      () => this.isLoading = false,
-    );
+        data => (this.addProduits = data, console.log(data)),
+        error => console.log(error),
+        () => (this.isLoading = false),
+      );
+  }
+  buyitem() {
+    console.log('1');
   }
 }
