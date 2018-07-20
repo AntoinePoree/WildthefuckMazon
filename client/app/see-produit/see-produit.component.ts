@@ -9,12 +9,10 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./see-produit.component.css'],
 })
 export class SeeProduitComponent implements OnInit {
-  addProduit = new AddProduit();
-  // addProduits: AddProduit[] = [];
+  addProduit: AddProduit;
   isLoading = true;
   isEditing = false;
-  id: any;
-  addProduits: AddProduit;
+  id: string;
 
   constructor(
     private addProduitService: AddProduitService,
@@ -25,11 +23,11 @@ export class SeeProduitComponent implements OnInit {
     this.getAddProduit();
   }
   getAddProduit() {
+    console.log(this.addProduit),
     this.addProduitService.getAddProduit(this.addProduit._id).subscribe(
-      data => this.addProduit = data,
-      error => console.log(error),
-      () => this.isLoading = false,
-    );
-    console.log(this.addProduit);
+        data => (this.addProduit = data, console.log(data)),
+        error => console.log(error),
+        () => (this.isLoading = false),
+      );
   }
 }

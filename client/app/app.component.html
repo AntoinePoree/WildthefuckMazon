@@ -16,10 +16,6 @@
           <a routerLink="/addproduct" class="nav-link" routerLinkActive="active" *ngIf="auth.loggedIn && auth.isAdmin">
             <i class="fa fa-list"></i> addproduit
           </a>
-        </li><li class="nav-item">
-          <a routerLink="/product" class="nav-link" routerLinkActive="active">
-            <i class="fa fa-list"></i> produit
-          </a>
         </li>
         <li class="nav-item">
           <a routerLink="/login" class="nav-link" routerLinkActive="active" *ngIf="!auth.loggedIn">
