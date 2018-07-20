@@ -23,7 +23,7 @@ export class SeeProduitComponent implements OnInit {
     this.getAddProduit();
   }
   getAddProduit() {
-    console.log(this.addProduit),
+    console.log('produit', this.addProduit),
     this.addProduitService.getAddProduit(this.addProduit._id).subscribe(
         data => (this.addProduit = data, console.log(data)),
         error => console.log(error),
