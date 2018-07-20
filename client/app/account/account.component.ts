@@ -45,4 +45,11 @@ export class AccountComponent implements OnInit {
     this.sold += 1;
     this.save(this.user);
   }
+  getUltraRich() {
+    if (this.user.sold !== 0) {
+      this.sold = this.user.sold;
+    }
+    this.sold += 100;
+    this.save(this.user);
+  }
 }

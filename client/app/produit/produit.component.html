@@ -2,9 +2,9 @@
 <div class="album text-muted">
   <div class="container">
     <div class="row">
-      <!-- <div class="card col-12 col-md-6 col-lg-4" >
-        <img src="/client/assets/WildTheFuckMazon.png" alt="404"/>
-      </div> -->
+      <div class="sold mx-auto col-12 col-md-6 col-lg-4" >
+        <p *ngIf="user" class="sold-text mx-auto">My sold: {{ user.sold }}</p>
+      </div>
       <div class="row">
         <div class="card col-12 col-md-6 col-lg-4" *ngFor="let addProduit of addProduits">
           <a [routerLink]="['/see', addProduit._id]">
@@ -14,40 +14,7 @@
             <button type="button" class="btn btn-primary" (click)="buy(addProduit)">Buy {{ addProduit.name }} - {{ addProduit.price }} WTF</button>
           </p>
         </div>
-        <!-- <div class="card col-12 col-md-6 col-lg-4">
-        <img src="https://geo.img.pmdstatic.net/fit/https.3A.2F.2Fwww.2Egeo.2Efr.2Fvar.2Fgeo.2Fstorage.2Fimages.2Fmedia.2Fle-canyon-de-la-riviere-blyde-en-afrique-du-sud.2F1462232-1-fre-FR.2Fle-canyon-de-la-riviere-blyde-en-afrique-du-sud.2Ejpg/750x406/quality/65/le-canyon-de-la-riviere-blyde-en-afrique-du-sud.jpg" alt="card col-12 col-md-6 col-lg-4 image cap">
-        <p class="card col-12 col-md-6 col-lg-4-text">This is a wider</p>
       </div>
-      <div class="card col-12 col-md-6 col-lg-4">
-        <img src="https://geo.img.pmdstatic.net/fit/https.3A.2F.2Fwww.2Egeo.2Efr.2Fvar.2Fgeo.2Fstorage.2Fimages.2Fmedia.2Fle-canyon-de-la-riviere-blyde-en-afrique-du-sud.2F1462232-1-fre-FR.2Fle-canyon-de-la-riviere-blyde-en-afrique-du-sud.2Ejpg/750x406/quality/65/le-canyon-de-la-riviere-blyde-en-afrique-du-sud.jpg" alt="card col-12 col-md-6 col-lg-4 image cap">
-        <p class="card col-12 col-md-6 col-lg-4-text">This is a wider</p>
-      </div>
-
-      <div class="card col-12 col-md-6 col-lg-4">
-        <img src="https://geo.img.pmdstatic.net/fit/https.3A.2F.2Fwww.2Egeo.2Efr.2Fvar.2Fgeo.2Fstorage.2Fimages.2Fmedia.2Fle-canyon-de-la-riviere-blyde-en-afrique-du-sud.2F1462232-1-fre-FR.2Fle-canyon-de-la-riviere-blyde-en-afrique-du-sud.2Ejpg/750x406/quality/65/le-canyon-de-la-riviere-blyde-en-afrique-du-sud.jpg" alt="card col-12 col-md-6 col-lg-4 image cap">
-        <p class="card col-12 col-md-6 col-lg-4-text">This is a wider</p>
-      </div>
-      <div class="card col-12 col-md-6 col-lg-4">
-        <img src="https://geo.img.pmdstatic.net/fit/https.3A.2F.2Fwww.2Egeo.2Efr.2Fvar.2Fgeo.2Fstorage.2Fimages.2Fmedia.2Fle-canyon-de-la-riviere-blyde-en-afrique-du-sud.2F1462232-1-fre-FR.2Fle-canyon-de-la-riviere-blyde-en-afrique-du-sud.2Ejpg/750x406/quality/65/le-canyon-de-la-riviere-blyde-en-afrique-du-sud.jpg" alt="card col-12 col-md-6 col-lg-4 image cap">
-        <p class="card col-12 col-md-6 col-lg-4-text">This is a wider</p>
-      </div>
-      <div class="card col-12 col-md-6 col-lg-4">
-        <img src="https://geo.img.pmdstatic.net/fit/https.3A.2F.2Fwww.2Egeo.2Efr.2Fvar.2Fgeo.2Fstorage.2Fimages.2Fmedia.2Fle-canyon-de-la-riviere-blyde-en-afrique-du-sud.2F1462232-1-fre-FR.2Fle-canyon-de-la-riviere-blyde-en-afrique-du-sud.2Ejpg/750x406/quality/65/le-canyon-de-la-riviere-blyde-en-afrique-du-sud.jpg" alt="card col-12 col-md-6 col-lg-4 image cap">
-        <p class="card col-12 col-md-6 col-lg-4-text">This is a wider</p>
-      </div>
-      <div class="card col-12 col-md-6 col-lg-4">
-        <img src="https://geo.img.pmdstatic.net/fit/https.3A.2F.2Fwww.2Egeo.2Efr.2Fvar.2Fgeo.2Fstorage.2Fimages.2Fmedia.2Fle-canyon-de-la-riviere-blyde-en-afrique-du-sud.2F1462232-1-fre-FR.2Fle-canyon-de-la-riviere-blyde-en-afrique-du-sud.2Ejpg/750x406/quality/65/le-canyon-de-la-riviere-blyde-en-afrique-du-sud.jpg" alt="card col-12 col-md-6 col-lg-4 image cap">
-        <p class="card col-12 col-md-6 col-lg-4-text">This is a wider</p>
-      </div>
-      <div class="card col-12 col-md-6 col-lg-4">
-        <img src="https://geo.img.pmdstatic.net/fit/https.3A.2F.2Fwww.2Egeo.2Efr.2Fvar.2Fgeo.2Fstorage.2Fimages.2Fmedia.2Fle-canyon-de-la-riviere-blyde-en-afrique-du-sud.2F1462232-1-fre-FR.2Fle-canyon-de-la-riviere-blyde-en-afrique-du-sud.2Ejpg/750x406/quality/65/le-canyon-de-la-riviere-blyde-en-afrique-du-sud.jpg" alt="card col-12 col-md-6 col-lg-4 image cap">
-        <p class="card col-12 col-md-6 col-lg-4-text">This is a wider</p>
-      </div>
-      <div class="card col-12 col-md-6 col-lg-4">
-        <img src="https://geo.img.pmdstatic.net/fit/https.3A.2F.2Fwww.2Egeo.2Efr.2Fvar.2Fgeo.2Fstorage.2Fimages.2Fmedia.2Fle-canyon-de-la-riviere-blyde-en-afrique-du-sud.2F1462232-1-fre-FR.2Fle-canyon-de-la-riviere-blyde-en-afrique-du-sud.2Ejpg/750x406/quality/65/le-canyon-de-la-riviere-blyde-en-afrique-du-sud.jpg" alt="card col-12 col-md-6 col-lg-4 image cap">
-        <p class="card col-12 col-md-6 col-lg-4-text">This is a wider</p>
-      </div>  -->
-      </div>
-
+  
     </div>
   </div>

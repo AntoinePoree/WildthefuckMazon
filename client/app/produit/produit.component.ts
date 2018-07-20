@@ -26,13 +26,15 @@ export class ProduitComponent implements OnInit {
     private userService: UserService) { }
 
   ngOnInit() {
-    this.addProduitService.getAddProduits().subscribe((data) => {
-      this.addProduits = data;
-    });
+    this.getproduit();
     this.getUser();
     this.getAdmin();
   }
-
+  getproduit() {
+    this.addProduitService.getAddProduits().subscribe((data) => {
+      this.addProduits = data;
+    });
+  }
   getUser() {
     this.userService.getUser(this.auth.currentUser).subscribe(
       (data) => {
