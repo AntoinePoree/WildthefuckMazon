@@ -1,0 +1,8 @@
+.table td,
+.table th {
+  width: 25%;
+}
+img {
+  max-width: 10vh;
+  max-height: 10vh;
+}
