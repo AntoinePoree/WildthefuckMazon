@@ -28,4 +28,5 @@ img:hover {
 }
 .card-text {
     font-size: 85%;
+    margin-top: 5px;
 }
