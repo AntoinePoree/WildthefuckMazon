@@ -34,14 +34,14 @@
           <option value="admin">Admin</option>
         </select>
       </div>
-      <button class="btn btn-primary" type="submit" [disabled]="!accountForm.form.valid">
+      <!-- <button class="btn btn-primary" type="submit" [disabled]="!accountForm.form.valid">
         <i class="fa fa-save"></i> Save
-      </button>
+      </button> -->
     </form>
     <div class="wallet">
       <div class="sold">My sold : {{ user.sold }} WTF</div>
         <div class="button">To add 1 WTF to your wallet, click here :
-        <button class="btn btn-success" (click)="getRich()">Get WTF !</button>
+        <button class="btn btn-success" (click)="getRich()">Get WTF ! And save it</button>
       </div>
     </div>
   </div>
