@@ -11,7 +11,8 @@
           <img src="{{ addProduit.img }}" alt="404">
           </a>
           <p class="card-text col-12 col-md-6 col-lg-4-text">
-            <button type="button" class="btn btn-primary" (click)="buy(addProduit)">Buy {{ addProduit.name }} - {{ addProduit.price }} WTF</button>
+            <button type="button" class="btn btn-1" (click)="buy(addProduit)"> {{ addProduit.price }} WTF</button>
+            <button type="button" class="btn btn-see" [routerLink]="['/see', addProduit._id]">See {{ addProduit.name }}?</button>
           </p>
         </div>
       </div>
